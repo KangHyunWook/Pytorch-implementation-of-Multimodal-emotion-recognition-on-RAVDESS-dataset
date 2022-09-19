@@ -57,7 +57,7 @@ class AudioVisualModel(nn.Module):
 
         self.fusion = nn.Sequential()
       
-        self.fusion.add_module('fusion_layer_1', nn.Linear(in_features=128*2, 
+        self.fusion.add_module('fusion_layer_1', nn.Linear(in_features=128*4, 
                 out_features=128*3))
         self.fusion.add_module('fusion_layer_1_dropout', nn.Dropout(0.5))
         self.fusion.add_module('fusion_layer_1_activation', nn.ReLU())
@@ -117,7 +117,7 @@ class AudioVisualModel(nn.Module):
         
         h = self.transformer_encoder(h)
        
-        h = torch.cat((h[2], h[3]), dim=1)
+        h = torch.cat((h[0], h[1], h[2], h[3]), dim=1)
         
         o = self.fusion(h)
         
