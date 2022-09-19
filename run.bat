@@ -1,0 +1,1 @@
+python train.py --data_path c:/test/ksc2022/audio-visual-multimodal/au_mfcc.pkl
