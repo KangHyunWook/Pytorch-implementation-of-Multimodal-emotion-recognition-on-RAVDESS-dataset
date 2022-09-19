@@ -19,3 +19,6 @@ acc: 0.8556
 
 shared encoder only:
 acc: 0.8444
+
+audio only:
+acc: 0.3167
