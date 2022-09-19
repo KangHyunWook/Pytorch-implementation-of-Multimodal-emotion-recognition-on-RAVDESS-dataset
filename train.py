@@ -14,6 +14,32 @@ from torch.nn import functional as F
 from sklearn.utils import shuffle
 from models import AudioVisualModel
 
+def preprocess(au_mfcc_path):
+    data = []
+    labels = []
+    with open(au_mfcc_path, 'rb') as f:
+        au_mfcc = pickle.load(f)
+        
+    print(len(au_mfcc))
+    
+    for key in au_mfcc:
+        emotion = key.split('-')[2]
+        emotion = int(emotion)-1
+        labels.append(emotion)
+        data.append(au_mfcc[key])
+    
+    data=np.array(data)
+    labels = np.array(labels)
+    labels = labels.reshape(labels.shape+(1,))
+    
+    data = np.hstack((data, labels))
+    fdata = shuffle(data)
+    
+    data = fdata[:, :-1]
+    labels = fdata[:, -1].astype(int)
+    
+    return data, labels
+
 def eval(data, labels, mode=None, to_print=False):
     assert(mode is not None)
 
@@ -114,31 +140,14 @@ class CMD(nn.Module):
         return self.matchnorm(ss1, ss2)
 
 if __name__ == '__main__':
-    data=[]
-    labels=[]
+    
     ap = argparse.ArgumentParser()
     ap.add_argument('--data_path')
     args=ap.parse_args()
 
     args=vars(args)
     
-    with open(args['data_path'], 'rb') as out:
-        au_mfcc = pickle.load(out)
-    
-    for key in au_mfcc:
-        emotion = key.split('-')[2]
-        emotion=int(emotion)-1
-        labels.append(emotion)
-        data.append(au_mfcc[key])
-     
-    data=np.array(data)
-    labels=np.array(labels)
-    
-    labels=labels.reshape(labels.shape+(1,))
-    data=np.hstack((data,labels))
-    fdata=shuffle(data)
-    data=fdata[:,:-1]
-    labels = fdata[:,-1].astype(int)
+    data, labels=preprocess(args['data_path'])
     
     #todo: convert to one-hot
     
