@@ -8,6 +8,12 @@ Description: This code performs emotion recognition using two modalities, which 
 python train.py --data_path [path_to au_mfcc.pkl file]
 ```
 
+Above au_mfcc file contains mfcc features and the corresponding facial action units.
+The action units are extracted using OpenFace
+The code for preprocessing the raw mp4 data is to be uploaded.
+
+<h2>Experimental results</h2>
+
 shared encoder + private encoder:
 acc: 0.8556
 
