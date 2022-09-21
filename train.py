@@ -147,7 +147,6 @@ if __name__ == '__main__':
     torch.backends.cudnn.benchmark = False
     np.random.seed(random_seed)
     
-
     is_train=True
     
     cuda=True
