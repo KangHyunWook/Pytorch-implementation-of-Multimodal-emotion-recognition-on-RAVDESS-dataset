@@ -1,6 +1,12 @@
 # Pytorch-implementation-of-Multimodal-emotion-recognition-on-RAVDESS-dataset
 
+This work is in progress, the coda may be updated. However, it provides technical details of how to fuse two modalities. I am happy to help you guys so feel free to email me if you've got any questions.
+
+Mailto: kangtaepoong@naver.com
+
 Description: This code performs emotion recognition using two modalities, which are audio and vision extracted while a person is speaking.
+
+Youtube link: https://www.youtube.com/watch?v=MRyzIuIxKzc&lc=UgxOCzs7FV74n8LYnBt4AaABAg
 
 <h2>How to run</h2>
 
