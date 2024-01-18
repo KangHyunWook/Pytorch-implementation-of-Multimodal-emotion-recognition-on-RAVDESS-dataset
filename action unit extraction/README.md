@@ -6,6 +6,12 @@ Description: This code extracts action units, which are movements of facial musc
 python extract_aus.py -vid-folder [root_video_folder_path]
 ```
 
+```
+./RAVDESS/
+          actor_1
+          actor_2
+```
+
 The dataset link: https://zenodo.org/record/1188976#.ZALWUkpBxyY
 
 To extract action units, install openface: https://github.com/TadasBaltrusaitis/OpenFace
