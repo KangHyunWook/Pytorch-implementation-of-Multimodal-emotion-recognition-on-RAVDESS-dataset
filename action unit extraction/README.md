@@ -8,8 +8,8 @@ python au_extract.py -vid-folder [root_video_folder_path]
 
 ```
 ./RAVDESS/
-          actor_1
-          actor_2
+          Actor_01
+          Actor_02
 ```
 
 The dataset link: https://zenodo.org/record/1188976#.ZALWUkpBxyY
