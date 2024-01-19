@@ -3,7 +3,7 @@
 Description: This code extracts action units, which are movements of facial muscles while a person is speaking. The input is mp4 video and run as follows:
 
 ```
-python extract_aus.py -vid-folder [root_video_folder_path]
+python au_extract.py -vid-folder [root_video_folder_path]
 ```
 
 ```
