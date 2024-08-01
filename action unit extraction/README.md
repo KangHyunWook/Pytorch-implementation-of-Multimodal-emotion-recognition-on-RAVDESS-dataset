@@ -24,4 +24,4 @@ With those features extracted you can do sentiment analysis as follows:
 2. multimodal sentiment analysis: https://www.youtube.com/watch?v=MRyzIuIxKzc
 
 
-Fourier transform and absolute value of complex numbers: https://www.youtube.com/watch?v=CFSSA_8K6TM
+[Fourier transform and absolute value of complex numbers](https://www.youtube.com/watch?v=CFSSA_8K6TM)
