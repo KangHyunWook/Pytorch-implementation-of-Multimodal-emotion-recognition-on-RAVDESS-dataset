@@ -23,6 +23,5 @@ With those features extracted you can do sentiment analysis as follows:
 1. sentiment analysis by analyzing movements of facial muscles: https://www.youtube.com/watch?v=XqvgfdJNcRg
 2. multimodal sentiment analysis: https://www.youtube.com/watch?v=MRyzIuIxKzc
 
-Later, I am going to upload a video about speech emotion recognition, for prerequisites check the following video for basic understanding of signal processing.
 
 Fourier transform and absolute value of complex numbers: https://www.youtube.com/watch?v=CFSSA_8K6TM
